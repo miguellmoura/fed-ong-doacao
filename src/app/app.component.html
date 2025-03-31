@@ -1,0 +1,60 @@
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary mx-auto p-2">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul
+        <a class="nav-link active" style="margin-left: 20px;" aria-current="page" href="#">Home</a>
+        <a class="nav-link active" style="margin-left: 20px;" aria-current="page" href="#">Nossas ações</a>
+        <a class="nav-link active" style="margin-left: 20px;" aria-current="page" href="#">Como participar?</a>
+        <a class="nav-link active" style="margin-left: 20px;" aria-current="page" href="#">Faça uma doação</a>
+        <a class="nav-link active" style="margin-left: 20px;" aria-current="page" href="#">Contato</a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="d-flex justify-content-center">
+    <h4 class="text-center mt-4">Ajude crianças a terem um futuro, com tecnologias do futuro!</h4>
+  </div>
+
+  <app-home></app-home> -->
+
+  <ul class="nav justify-content-center align-items-center p-3">  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+    </div>
+    <li class="nav-item">
+      <img src="./app/assets/logo.png" alt="Tech4All" height="100">
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" id="home" style="margin-left: 20px;" aria-current="page" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" id="nacoes" style="margin-left: 20px;" aria-current="page" href="#">Nossas ações</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" id="participar" style="margin-left: 20px;" aria-current="page" href="#">Como participar?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" id="doacao" style="margin-left: 20px;" aria-current="page" href="#">Faça uma doação</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" id="contato" style="margin-left: 20px;" aria-current="page" href="#">Contato</a>
+    </li>
+  </ul>
+  <div class="video-container" class="d-flex justify-content-center"> 
+    <video src="video.mp4" controls class="w-75"></video>
+    <div class="overlay">
+      <label>Democratizando o conhecimento de tecnologia</label>
+      <p style="color: white">Nos ajude a fazer a fazer a diferença na vida de crianças e adolescentes em situação de vulnerabilidade social</p>
+      <button id="botaoDoeAqui" onclick="alert('Botão clicado!')">Doe aqui</button>
+    </div>
+  </div>
+  <app-stories></app-stories>
+  <app-actions></app-actions>
