@@ -1,10 +1,68 @@
 #body {
-    background-color: #11837C;
+    background-color: #1A2B5E;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 #container {
-    padding-left: 100px;
-    padding-right: 100px;
-    background-color: #3BDDD3;
-    margin-bottom: 20px;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #2C3E75;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-img {
+    width: 12rem;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.donation-form {
+    background-color: #3A4D8F;
+    padding: 2rem; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 30rem; 
+}
+
+.donation-form .form-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #E6E6E6;
+}
+
+.donation-form .form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.donation-form .btn-primary {
+    background-color: #25335A; 
+    border: none;
+    color: white;
+    padding: 0.75rem 1rem; 
+    border-radius: 5px;
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.donation-form .btn-primary:hover {
+    background-color: #1A2345; 
 }
