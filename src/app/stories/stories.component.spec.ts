@@ -21,3 +21,5 @@ describe('StoriesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+export { StoriesComponent };

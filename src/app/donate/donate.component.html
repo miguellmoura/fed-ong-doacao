@@ -1,6 +1,5 @@
 <div class="d-flex flex-column align-items-center justify-content-center" id="body">
     <h4 class="form-title">Faça uma doação</h4>
-
     <form class="donation-form">
         <div class="mb-3">
             <label for="donationAmount" class="form-label">Valor da Doação</label>
@@ -8,11 +7,15 @@
         </div>
         <div class="mb-3">
             <label for="donorName" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="donorName" placeholder="Seu nome">
+            <input type="text" class="form-control" id="donorName" placeholder="Seu nome" 
+                   pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]{2,}$" 
+                   title="O nome deve conter apenas letras e espaços, com no mínimo 2 caracteres." required>
         </div>
         <div class="mb-3">
             <label for="donorEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="donorEmail" placeholder="Seu email">
+            <input type="email" class="form-control" id="donorEmail" placeholder="Seu email" 
+                   pattern="^(?!\.)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?<!\.)$" 
+                   title="Por favor, insira um email válido. Exemplo: nome@dominio.com" required>
         </div>
         <div class="mb-3">
             <label for="donorMessage" class="form-label">Mensagem</label>
