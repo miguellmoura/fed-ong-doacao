@@ -1,8 +1,9 @@
 import { provideRouter, withEnabledBlockingInitialNavigation, withInMemoryScrolling, withRouterConfig } from '@angular/router';
 import { routes } from './app/app.routes';
-import { EnvironmentProviders } from '@angular/core';
+import { EnvironmentProviders, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication as angularBootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
+import { provideHttpClient } from '@angular/common/http';
 
 function bootstrapApplication(AppComponent: any, options: { providers: EnvironmentProviders[] }) {
   return angularBootstrapApplication(AppComponent, {
@@ -12,6 +13,7 @@ function bootstrapApplication(AppComponent: any, options: { providers: Environme
 
 bootstrapApplication(AppComponent, {
   providers: [
+    provideHttpClient(),
     provideRouter(
       routes,
       withEnabledBlockingInitialNavigation(),

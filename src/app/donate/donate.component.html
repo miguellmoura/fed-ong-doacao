@@ -1,26 +1,27 @@
-<div class="d-flex flex-column align-items-center justify-content-center" id="body">
-    <h4 class="form-title">Faça uma doação</h4>
-    <form class="donation-form">
-        <div class="mb-3">
-            <label for="donationAmount" class="form-label">Valor da Doação</label>
-            <input type="number" class="form-control" id="donationAmount" placeholder="Digite o valor" min="1" required>
-        </div>
-        <div class="mb-3">
-            <label for="donorName" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="donorName" placeholder="Seu nome" 
-                   pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]{2,}$" 
-                   title="O nome deve conter apenas letras e espaços, com no mínimo 2 caracteres." required>
-        </div>
-        <div class="mb-3">
-            <label for="donorEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="donorEmail" placeholder="Seu email" 
-                   pattern="^(?!\.)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?<!\.)$" 
-                   title="Por favor, insira um email válido. Exemplo: nome@dominio.com" required>
-        </div>
-        <div class="mb-3">
-            <label for="donorMessage" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="donorMessage" rows="4" placeholder="Deixe uma mensagem (opcional)"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Doar</button>
-    </form>
-</div>
+<form class="donation-form" (ngSubmit)="createDoacao()" #donationForm="ngForm">
+  <div class="mb-3">
+    <label for="donationAmount" class="form-label">Valor da Doação</label>
+    <input type="number" class="form-control" id="donationAmount" name="valor"
+           placeholder="Digite o valor" min="1" required [(ngModel)]="donation.valor">
+  </div>
+
+  <!-- Campos visuais, opcionais -->
+  <div class="mb-3">
+    <label for="donorName" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="donorName" name="nome"
+           placeholder="Seu nome">
+  </div>
+  <div class="mb-3">
+    <label for="donorEmail" class="form-label">Email</label>
+    <input type="email" class="form-control" id="donorEmail" name="email"
+           placeholder="Seu email">
+  </div>
+
+  <div class="mb-3">
+    <label for="donorId" class="form-label">CPF</label>
+    <input type="number" class="form-control" id="donorId" name="cpf"
+           placeholder="Seu CPF" min="1" required [(ngModel)]="donation.id_doador">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Doar</button>
+</form>
