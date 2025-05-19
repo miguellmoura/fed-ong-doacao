@@ -1,36 +1,40 @@
-<form class="donation-form" (ngSubmit)="createDoacao()" #donationForm="ngForm">
-  <div class="mb-3">
-    <label for="donationAmount" class="form-label">Valor da Doação</label>
-    <input type="number" class="form-control" id="donationAmount" name="valor"
-           placeholder="Digite o valor" min="1" required [(ngModel)]="donation.valor">
-  </div>
+<body>
+  <div id="container">
+    <form class="donation-form" (ngSubmit)="createDoacao()" #donationForm="ngForm">
+      <div class="mb-3">
+        <label for="donationAmount" class="form-label">Valor da Doação</label>
+        <input type="number" class="form-control" id="donationAmount" name="valor"
+               placeholder="Digite o valor" min="1" required [(ngModel)]="donation.valor">
+      </div>
 
-  <!-- Campos visuais, opcionais -->
-  <div class="mb-3">
-    <label for="donorName" class="form-label">Nome</label>
-    <input type="text" class="form-control" id="donorName" name="nome"
-           placeholder="Seu nome">
-  </div>
-  <div class="mb-3">
-    <label for="donorEmail" class="form-label">Email</label>
-    <input type="email" class="form-control" id="donorEmail" name="email"
-           placeholder="Seu email">
-  </div>
+      <div class="mb-3">
+        <label for="donorName" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="donorName" name="nome"
+               placeholder="Seu nome">
+      </div>
 
-  <div class="mb-3">
-    <label for="donationCPF" class="form-label">Seu CPF</label>
-    <input type="text" class="form-control" id="donationCPF" name="CPF"
-           placeholder="Digite o seu CPF" min="1" required [(ngModel)]="donation.id_doador">
+      <div class="mb-3">
+        <label for="donorEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="donorEmail" name="email"
+               placeholder="Seu email">
+      </div>
+
+      <div class="mb-3">
+        <label for="donationCPF" class="form-label">Seu CPF</label>
+        <input type="text" class="form-control" id="donationCPF" name="CPF"
+               placeholder="Digite o seu CPF" required [(ngModel)]="donation.id_doador">
+      </div>
+
+      <div class="mb-3">
+        <label for="parceiro" class="form-label">Escolha o Parceiro</label>
+        <select class="form-control" id="parceiro" name="parceiro" required [(ngModel)]="donation.id_parceiro">
+          <option [ngValue]="1">Parceiro Tech</option>
+          <option [ngValue]="2">Parceiro Educa</option>
+          <option [ngValue]="3">Parceiro Saúde</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Doar</button>
+    </form>
   </div>
-
-  <div class="mb-3">
-  <label for="parceiro" class="form-label">Escolha o Parceiro</label>
-  <select class="form-control" id="parceiro" name="parceiro" required [(ngModel)]="donation.id_parceiro">
-    <option [ngValue]="1">Parceiro Tech</option>
-    <option [ngValue]="2">Parceiro Educa</option>
-    <option [ngValue]="3">Parceiro Saúde</option>
-  </select>
-</div>
-
-  <button type="submit" class="btn btn-primary">Doar</button>
-</form>
+</body>

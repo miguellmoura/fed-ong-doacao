@@ -1,68 +1,54 @@
-#body {
-    background-color: #1A2B5E;
-    color: white;
-    padding: 2rem;
-    border-radius: 10px;
-}
-
-.form-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1A2B5E;
+  font-family: Poppins, sans-serif;
 }
 
 #container {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: #2C3E75;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-img {
-    width: 12rem;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 4rem;   
+  margin-bottom: 4rem; 
 }
 
 .donation-form {
-    background-color: #3A4D8F;
-    padding: 2rem; 
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 30rem; 
+  background-color: #3A4D8F;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
 }
 
 .donation-form .form-label {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #E6E6E6;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #E6E6E6;
 }
 
 .donation-form .form-control {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0.5rem;
-    font-size: 0.9rem;
-    width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  width: 100%;
 }
 
 .donation-form .btn-primary {
-    background-color: #25335A; 
-    border: none;
-    color: white;
-    padding: 0.75rem 1rem; 
-    border-radius: 5px;
-    font-family: Poppins, sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 100%;
+  background-color: #25335A;
+  border: none;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
 }
 
 .donation-form .btn-primary:hover {
-    background-color: #1A2345; 
+  background-color: #1A2345;
 }
