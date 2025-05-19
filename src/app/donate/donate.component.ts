@@ -16,12 +16,7 @@ export class DonateComponent {
 
   constructor(private doacaoService: DoacaoService) { }
 
-  gerarIdParceiro(): number {
-    return Math.floor(Math.random() * 3) + 1;
-  }
-
   createDoacao() {
-    this.donation.id_parceiro = this.gerarIdParceiro();
 
     this.donation.data_doacao = new Date();
     this.donation.status = 'APROVADA';

@@ -23,5 +23,14 @@
            placeholder="Digite o seu CPF" min="1" required [(ngModel)]="donation.id_doador">
   </div>
 
+  <div class="mb-3">
+  <label for="parceiro" class="form-label">Escolha o Parceiro</label>
+  <select class="form-control" id="parceiro" name="parceiro" required [(ngModel)]="donation.id_parceiro">
+    <option [ngValue]="1">Parceiro Tech</option>
+    <option [ngValue]="2">Parceiro Educa</option>
+    <option [ngValue]="3">Parceiro Saúde</option>
+  </select>
+</div>
+
   <button type="submit" class="btn btn-primary">Doar</button>
 </form>
