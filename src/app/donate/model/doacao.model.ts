@@ -1,5 +1,5 @@
 export class DoacaoDTO {
-    id_doador?: number;
+    id_doador?: string;
     id_parceiro?: number;
     valor?: number;
     data_doacao?: Date;

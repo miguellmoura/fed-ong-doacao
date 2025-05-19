@@ -18,9 +18,9 @@
   </div>
 
   <div class="mb-3">
-    <label for="donorId" class="form-label">CPF</label>
-    <input type="number" class="form-control" id="donorId" name="cpf"
-           placeholder="Seu CPF" min="1" required [(ngModel)]="donation.id_doador">
+    <label for="donationCPF" class="form-label">Seu CPF</label>
+    <input type="text" class="form-control" id="donationCPF" name="CPF"
+           placeholder="Digite o seu CPF" min="1" required [(ngModel)]="donation.id_doador">
   </div>
 
   <button type="submit" class="btn btn-primary">Doar</button>
