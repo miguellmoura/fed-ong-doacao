@@ -1,45 +1,72 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 .card {
-    padding: 20px;
-    margin: 1rem;
-    background-color: #f8f9fa; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease; 
-    margin-bottom: 5rem;
-    margin-top: 3rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 18rem;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .card:hover {
-    transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .card-img-top {
-    width: 100%;
-    height: 12rem; 
-    object-fit: cover; 
-    border-radius: 10px;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
-.card-body {
-    text-align: center; 
+.card-body h5, .card-body p, .card-body button {
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
-#body {
-    background-color: #E6E6E6; 
+.card-body p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: Poppins, sans-serif;
+  padding: 0 1rem;
 }
 
 .btn-primary {
-    background-color: #32477D; 
-    border: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-family: Poppins, sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
+  background-color: #32477D;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  min-width: 140px;
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
-    background-color: #25335A; 
+  background-color: #25335A;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }

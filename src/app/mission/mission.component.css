@@ -34,12 +34,15 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .mission-img {
     width: 20%;
+    min-width: 150px;
     height: auto;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .mission-text-content {
@@ -47,7 +50,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    flex: 1;
+    min-width: 250px;
 }
 
 .mission-title {
@@ -61,4 +65,46 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: #333;
+}
+
+
+@media (max-width: 992px) {
+    .mission-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mission-img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .mission-text-content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .mission-title {
+        font-size: 1.25rem;
+    }
+
+    .mission-text {
+        font-size: 0.95rem;
+    }
+
+    .mission-container {
+        padding: 1rem;
+    }
+
+    .mission-text-content {
+        padding: 1rem;
+    }
 }
