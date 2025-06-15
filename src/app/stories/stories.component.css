@@ -1,8 +1,9 @@
 .stories-container {
   font-family: 'Poppins', sans-serif;
-  background-color: #E6E6E6;
+  background-color: var(--bg-color-secondary);
   padding: 3rem 2rem;
   border-radius: 10px;
+  width: 100%;
 }
 
 .section-title {
@@ -10,7 +11,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 3rem;
-  color: #000;
+  color: var(--text-color);
 }
 
 .intro-row {
@@ -34,7 +35,7 @@
 .decorative-shape {
   width: 60px;
   height: 60px;
-  background-color: #008E5A;
+  background-color: var(--highlight-color);
   border-bottom-right-radius: 100%;
   position: absolute;
   top: 0;
@@ -44,7 +45,7 @@
 
 .card {
   position: relative;
-  background-color: #B7B4A9;
+  background-color: var(--card-bg);
   border-radius: 20px;
   overflow: hidden;
   width: 300px;
@@ -53,11 +54,10 @@
   flex-direction: column;
 }
 
-
 .intro-text .decorative-shape {
   width: 40px;
   height: 40px;
-  background-color: #008E5A;
+  background-color: var(--highlight-color);
   border-top-right-radius: 100%;
   position: absolute;
   top: 0;
@@ -68,7 +68,7 @@
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;
-  color: #000;
+  color: var(--text-color);
 }
 
 .cards {
@@ -77,16 +77,6 @@
   gap: 2rem;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-.card {
-  background-color: #B7B4A9;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
 }
 
 .card img {
@@ -100,7 +90,7 @@
 
 .quote {
   padding: 1rem;
-  color: #fff;
+  color: var(--text-color);
   font-size: 0.95rem;
 }
 
@@ -154,7 +144,6 @@
     padding: 1rem;
   }
 
-  
   .quote strong {
     font-size: 1.1rem;
   }

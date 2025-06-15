@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #1A2B5E;
+  background-color: var(--bg-color-tertiary);
   font-family: Poppins, sans-serif;
 }
 
@@ -16,7 +16,7 @@ html, body {
 }
 
 .donation-form {
-  background-color: #3A4D8F;
+  background-color: var(--bg-color-secondary);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -24,10 +24,16 @@ html, body {
   max-width: 500px;
 }
 
+h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
 .donation-form .form-label {
   font-size: 0.9rem;
   font-weight: bold;
-  color: #E6E6E6;
+  color: var(--text-color);
 }
 
 .donation-form .form-control {

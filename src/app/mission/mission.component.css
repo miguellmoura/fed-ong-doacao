@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #E6E6E6;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .mission-container {
@@ -17,7 +17,7 @@ body {
     margin-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
-    color: #1A2B5E; 
+    color: var(--bg-color-mission);
 }
 
 .mission-content {
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    background-color: #fff;
+    background-color: var(--bg-color-tertiary);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -58,13 +58,13 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #1A2B5E;
+    color: var(--white-color);
 }
 
 .mission-text {
     font-size: 1rem;
     line-height: 1.6;
-    color: #333;
+    color: var(--white-color);
 }
 
 

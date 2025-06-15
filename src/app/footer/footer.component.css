@@ -1,8 +1,9 @@
 #footer {
-    background-color: #1A2B5E;
-    color: white;
+    background-color: var(--bg-color-tertiary);
+    color: var(--text-inverted);
     padding: 2rem 1rem;
     font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .footer-container {
@@ -22,12 +23,14 @@
 .footer-section h4 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #27a573;
+    color: var(--highlight-color);
+    transition: color 0.3s;
 }
 
 .footer-section p {
     font-size: 0.9rem;
     line-height: 1.6;
+    color: var(--text-inverted);
 }
 
 .social-icons {
@@ -36,19 +39,20 @@
 }
 
 .social-icons a {
-    color: white;
+    color: var(--text-inverted);
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #00FF7F;
+    color: var(--highlight-color);
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 2rem;
     font-size: 0.8rem;
-    border-top: 1px solid #27a573;
+    border-top: 1px solid var(--highlight-color);
     padding-top: 1rem;
+    color: var(--text-inverted);
 }

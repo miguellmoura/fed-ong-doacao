@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 py-2">
   <div class="container-fluid d-flex justify-content-between align-items-center">
     <a class="navbar-brand" href="#">
-      <img src="./app/assets/logo/logo.png" alt="Tech4All" height="90" width="100" class="d-inline-block align-text-top">
+      <img src="{{isDarkMode ? './app/assets/logo/logoDarkMode.png' : './app/assets/logo/logo.png'}}" alt="Tech4All" height="90" width="100" class="d-inline-block align-text-top">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -27,7 +27,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active mx-2" [routerLink]="['/']" fragment="contato">Contato</a>
-        </li>        
+        </li>
+             <div class="theme-toggle">
+              <label class="switch">
+                <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme()" />
+                <span class="slider round"></span>
+              </label>
+             </div>
       </ul>
     </div>
   </div>
