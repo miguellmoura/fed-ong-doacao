@@ -1,24 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 a {
   font-family: "Poppins", sans-serif;
-  color: #062D50;
+  color: var(--text-color);
   font-size: larger;
+  text-decoration: none;
 }
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1050; 
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  width: 100%;
+  height: 13%;
+  z-index: 1050;
+  background-color: var(--bg-color-secondary) !important;
   backdrop-filter: blur(5px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+.navbar-collapse {
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--bg-color-secondary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: -30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav {
+  width: 100%;
+  flex-direction: column;
+}
+
+.nav-item {
+  margin: 0.5rem 0;
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.theme-toggle {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #32477D;
+}
+
+input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
 }
 
 .video-container {
   width: 100%;
-  height: 500px; 
+  height: 500px;
   overflow: hidden;
   position: relative;
   margin-top: 90px;
@@ -40,12 +159,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
   padding-left: 60px;
   padding-right: 30px;
   pointer-events: none;
   background: rgba(0, 0, 0, 0.4);
-  color: white;
+  color: var(--text-inverted);
 }
 
 .overlay h2 {
@@ -65,25 +184,52 @@ a {
 .overlay button {
   padding: 12px 24px;
   font-size: 1rem;
-  background-color: #28a745;
-  color: white;
+  background-color: var(--highlight-color);
+  color: var(--button-text, #ffffff);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   pointer-events: auto;
   transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 .overlay button:hover {
-  background-color: #218838;
+  background-color: var(--highlight-hover);
 }
 
-.overlay h2, .overlay p, .overlay button {
+.overlay h2,
+.overlay p,
+.overlay button {
   font-family: "Poppins", sans-serif;
 }
 
 #botaoDoeAqui {
-  margin-top: 100px; 
+  margin-top: 100px;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 0 0.5rem;
+  }
+
+  .theme-toggle {
+    margin-left: 1.5rem;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -91,17 +237,21 @@ a {
     height: 350px;
     margin-top: 80px;
   }
+
   .overlay {
     padding-left: 30px;
     padding-right: 15px;
   }
+
   .overlay h2 {
     font-size: 2rem;
   }
+
   .overlay p {
     font-size: 1rem;
     max-width: 90vw;
   }
+
   #botaoDoeAqui {
     margin-top: 40px;
   }
@@ -112,24 +262,24 @@ a {
     height: 220px;
     margin-top: 120px;
   }
+
   .overlay {
     padding-left: 10px;
     padding-right: 10px;
     align-items: center;
     text-align: center;
   }
+
   .overlay h2 {
     font-size: 1.2rem;
     margin-bottom: 6px;
   }
+
   .overlay p {
     font-size: 0.95rem;
     margin-bottom: 10px;
   }
-  .overlay button {
-    font-size: 0.95rem;
-    padding: 10px 18px;
-  }
+
   #botaoDoeAqui {
     margin-top: 20px;
   }
@@ -139,11 +289,12 @@ a {
   .video-container {
     margin-top: 130px;
   }
+
   .overlay h2 {
     font-size: 1rem;
   }
+
   .overlay p {
     font-size: 0.85rem;
   }
 }
-

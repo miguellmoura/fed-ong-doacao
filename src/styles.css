@@ -22,3 +22,43 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
+:root {
+  --bg-color: #ffffff;
+  --bg-color-secondary: #E6E6E6;
+  --bg-color-tertiary:  #32477D;
+  --text-color: #000000;
+  --text-inverted: #ffffff;
+  --highlight-color: #008E5A;
+  --card-bg: #ffffff;
+  --button-bg: #006F47;
+  --button-hover-bg: #005A3D;
+  --bg-color-mission: #0f2c51;
+  --white-color: #ffffff;
+}
+
+.dark-theme {
+  --bg-color: #0F172A; 
+  --bg-color-secondary: #1E293B; 
+  --bg-color-tertiary: #0f2c51;
+  --text-color: #F1F5F9; 
+  --text-inverted: #ffffff;
+  --highlight-color: #175477; 
+  --card-bg: #273549; 
+  --button-bg: rgb(26, 66, 104);
+  --button-hover-bg: #364771;
+  --bg-color-mission: #fff;
+  --white-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme, html.dark-theme {
+  background-color: var(--bg-color-secondary);
+  color: white;
+}
+

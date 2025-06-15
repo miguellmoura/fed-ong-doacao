@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { QRCodeComponent } from 'angularx-qrcode';
 import { DoacaoDTO } from '../model/doacao.model';
 import { Observable } from 'rxjs';
 

@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 import { DonateComponent } from './donate/donate.component';
 import { FooterComponent } from './footer/footer.component';
 import { MissionComponent } from './mission/mission.component';
-import { QRCodeComponent } from 'angularx-qrcode';
 
 @Component({
   selector: 'app-root',
@@ -22,11 +21,32 @@ import { QRCodeComponent } from 'angularx-qrcode';
     DonateComponent,
     MissionComponent,
     FooterComponent,
-    QRCodeComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'demo-ong-doacao';
+  isDarkMode = false;
+
+  ngOnInit(): void {
+    const savedTheme = localStorage.getItem('theme');
+    this.isDarkMode = savedTheme === 'dark';
+    this.updateTheme();
+  }
+
+  toggleTheme(): void {
+    this.isDarkMode = !this.isDarkMode;
+    localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
+    this.updateTheme();
+  }
+
+  updateTheme(): void {
+    const body = document.body;
+    if (this.isDarkMode) {
+      body.classList.add('dark-theme');
+    } else {
+      body.classList.remove('dark-theme');
+    }
+  }
 }
