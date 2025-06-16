@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DoacaoService } from './service/doacao.service';
 import { DoacaoDTO } from './model/doacao.model';
 import { OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-donate',
@@ -42,9 +44,21 @@ export class DonateComponent implements OnInit {
 
     this.doacaoService.createDonation(this.donation).subscribe({
       next: (res: any) => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Doação realizada!',
+          text: 'Sua doação foi registrada com sucesso. Obrigado por contribuir!',
+          confirmButtonText: 'OK'
+        });
         console.log('Doação enviada com sucesso!', res);
       },
       error: (err: any) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro!',
+          text: 'Houve um problema ao registrar sua doação. Tente novamente.',
+          confirmButtonText: 'OK'
+        });
         console.error('Erro ao enviar doação', err);
       }
     });
