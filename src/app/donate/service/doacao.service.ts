@@ -10,6 +10,10 @@ export class DoacaoService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getParceiro(): Observable<any[]> {
+    return this.httpClient.get<any>('http://localhost:8080/api/parceiro');
+  }
+
   createDonation(donation: DoacaoDTO): Observable<DoacaoDTO> {
     return this.httpClient.post<DoacaoDTO>('http://localhost:8080/api/doacoes', donation)
   }
