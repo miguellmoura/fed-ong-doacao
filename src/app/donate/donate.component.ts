@@ -37,8 +37,8 @@ export class DonateComponent implements OnInit {
 
     this.donation.data_doacao = new Date();
     this.donation.status = 'APROVADA';
-
-    this.donation.qrcodepix = 'https://meu.qrcode.fake/123';
+    this.donation.qrcodepix = 'https://qrcodepix';
+    this.donation.id_doador = 1;
 
     console.log('Enviando doação:', this.donation);
 
